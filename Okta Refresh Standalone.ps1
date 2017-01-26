@@ -6,10 +6,6 @@ For your use case, we can disable individual users with this command:
 Get-xOktaUser -UserName Test | 
 #>
 
-$OktaToken = "00HcltScb8laqTnrH3GSTyi-B-SGINbDMlF-EfwM-0"
-$OktaBaseUrl = "https://boardwith.okta.com"
-Connect-Okta -token $OktaToken -baseUrl $OktaBaseUrl
-
 $headers = @{"Authorization" = "SSWS $OktaToken"; "Accept" = "application/json"; "Content-Type" = "application/json"}
 $baseUrl = "$OktaBaseUrl/api/v1"
 $userAgent = "OktaAPIWindowsPowerShell/0.1"
